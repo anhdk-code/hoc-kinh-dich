@@ -157,12 +157,33 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betw
 .info dd{margin:0}
 .info .meaning{background:var(--mist);border-radius:4px;padding:12px 14px;margin-bottom:12px}
 .info .note{font-size:14px;color:var(--muted);font-style:italic}
+.info .more{font-size:15px;margin-bottom:12px}
+.info .more p{margin:0 0 8px}
+.info .more b{color:var(--slate-deep)}
+
+/* Các phần nội dung mở rộng */
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.cols>*{min-width:0}
+.cols h3,.topic h3{font-size:17px;font-weight:500;margin:0 0 12px;letter-spacing:.02em}
+.slate .cols h3,.slate .topic h3{color:var(--gold)}
+.topic{display:grid;grid-template-columns:1.25fr 1fr;gap:44px;align-items:start}
+.topic>*{min-width:0}
+.lead{font-size:17px;margin-bottom:18px}
+.chap{margin:0 0 20px;display:grid;grid-template-columns:96px 1fr;gap:10px 14px;font-size:15px}
+.chap dt{font-weight:500;color:var(--slate)}
+.chap dd{margin:0}
+.slate .chap dt{color:var(--gold)}
+.small{font-size:14px;color:var(--muted)}
+.slate .small{color:#d5dbc0}
+.quote{color:#eef0e4;margin-left:0;margin-right:0}
+.step a.go{margin-top:auto;padding-top:6px;font-size:14px;font-weight:500;color:var(--slate)}
+.mist .small{color:#4c5440}
 .foot{display:flex;justify-content:space-between;gap:10px;padding:10px 20px 18px}
 .foot .btn{padding:9px 20px;font-size:14px}
 .foot .btn[disabled]{opacity:.4;cursor:default}
 
 @media (max-width:860px){
-  .hero,.two,.about{grid-template-columns:1fr}
+  .hero,.two,.about,.cols,.topic{grid-template-columns:1fr}
   .road{grid-template-columns:repeat(2,1fr)}
   .eight{grid-template-columns:repeat(2,1fr)}
   .pcard{min-height:270px}
@@ -203,7 +224,9 @@ nav.menu{min-width:0;flex:1;justify-content:flex-end}
       <a href="#kinh-dich">Kinh Dịch là gì</a>
       <a href="#64-que">64 quẻ</a>
       <a href="#bat-quai">Bát quái</a>
-      <a href="#lo-trinh">Lão Tử, Khổng Tử, Phật</a>
+      <a href="#lao-tu">Lão Tử</a>
+      <a href="#khong-tu">Khổng Tử</a>
+      <a href="#phat">Phật</a>
       <a href="#sach">Sách đã đọc</a>
       <a href="#ve-toi">Về tôi</a>
     </nav>
@@ -262,6 +285,36 @@ nav.menu{min-width:0;flex:1;justify-content:flex-end}
   </div>
 </section>
 
+<!-- Cách đọc một quẻ, Kinh và Thập Dực -->
+<section class="band slate" id="cach-doc">
+  <div class="wrap">
+    <h2 class="script center">Cách đọc một quẻ</h2>
+    <div class="cols">
+      <div>
+        <h3>Đọc hình quẻ</h3>
+        <ul class="sq">
+          <li>Mỗi quẻ có hai quái chồng lên nhau. Quái dưới là nội quái (hạ quái), quái trên là ngoại quái (thượng quái). Nội là bên trong, việc của mình. Ngoại là bên ngoài, hoàn cảnh.</li>
+          <li>Sáu hào đọc từ dưới lên: sơ, nhị, tam, tứ, ngũ, thượng. Hào dương gọi là Cửu, hào âm gọi là Lục.</li>
+          <li>Hào ở ngôi lẻ (sơ, tam, ngũ) là ngôi dương, hào ở ngôi chẵn (nhị, tứ, thượng) là ngôi âm. Dương ở ngôi dương hay âm ở ngôi âm gọi là đắc chính, tức đúng chỗ.</li>
+          <li>Nhị và ngũ nằm giữa mỗi quái nên gọi là đắc trung. Ngũ thường là ngôi người đứng đầu, nhị là ngôi người phụ tá ở bên dưới.</li>
+          <li>Ba cặp sơ với tứ, nhị với ngũ, tam với thượng gọi là ứng. Một âm một dương thì ứng nhau, giúp nhau. Hai hào kề nhau thì gọi là tỉ.</li>
+          <li>Mỗi quẻ là một thời. Cùng một hành động, gặp thời khác nhau thì kết quả khác nhau. Vì vậy Dịch dạy xem thời trước khi làm.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Phần Kinh và phần Truyện</h3>
+        <ul class="sq">
+          <li>Phần Kinh gồm lời quẻ (thoán từ, tương truyền của Văn Vương) và lời hào (hào từ, tương truyền của Chu Công).</li>
+          <li>Phần Truyện là mười thiên chú giải, gọi là Thập Dực, nghĩa là mười cánh giúp Kinh bay lên: Thoán truyện (hai thiên), Tượng truyện (hai thiên), Hệ từ truyện (hai thiên), Văn ngôn, Thuyết quái, Tự quái, Tạp quái.</li>
+          <li>Tượng truyện chia thành Đại tượng, nói hình ảnh của cả quẻ và điều người quân tử rút ra, và Tiểu tượng, nói về từng hào.</li>
+          <li>Hệ từ là thiên triết lý nhất, bàn về Thái Cực, âm dương, và cách đọc biến hóa. Câu "cương nhu tương thôi nhi sinh biến hóa" nằm ở đây.</li>
+          <li>Theo truyền thống, Phục Hy vạch Bát Quái, Văn Vương xếp thành 64 quẻ và viết lời quẻ, Chu Công viết lời hào, Khổng Tử viết Thập Dực. Các nhà nghiên cứu hiện đại còn tranh luận về từng điểm này.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- 64 quẻ -->
 <section class="band paper" id="64-que">
   <div class="wrap">
@@ -272,7 +325,7 @@ nav.menu{min-width:0;flex:1;justify-content:flex-end}
     </div>
     <div class="grid" id="grid"></div>
     <p class="nores" id="nores">Không có quẻ nào khớp. Thử tên ngắn như Thái, Khiêm, Cách.</p>
-    <p class="hint">Bấm vào một quẻ để xem hình quẻ, hai quái, sáu hào và ý nghĩa tóm lược. Dùng phím mũi tên để chuyển quẻ.</p>
+    <p class="hint">Bấm vào một quẻ để xem hình quẻ, hai quái, sáu hào, ý nghĩa và bài học. Dùng phím mũi tên để chuyển quẻ.</p>
   </div>
 </section>
 
@@ -294,26 +347,161 @@ nav.menu{min-width:0;flex:1;justify-content:flex-end}
         <span class="tag">Đang viết</span>
         <h3>Kinh Dịch</h3>
         <span class="han">易經</span>
-        <p>64 quẻ, Bát quái, Thập Dực. Mỗi quẻ có bản tóm lược và ghi chú riêng của tôi.</p>
+        <p>64 quẻ, Bát quái, Thập Dực. Mỗi quẻ có phần tóm lược, ý nghĩa và bài học, kèm ghi chú riêng của tôi khi viết xong.</p>
+        <a class="go" href="#64-que">Xem 64 quẻ →</a>
       </article>
       <article class="step">
-        <span class="tag">Tiếp theo</span>
+        <span class="tag">Đã có phần giới thiệu</span>
         <h3>Lão Tử</h3>
         <span class="han">道德經</span>
         <p>Đạo Đức Kinh, 81 chương. Nhu, tĩnh, vô vi, những điều đối trọng với tính quyết liệt của người làm kỹ thuật.</p>
+        <a class="go" href="#lao-tu">Xem phần Lão Tử →</a>
       </article>
       <article class="step">
-        <span class="tag">Tiếp theo</span>
+        <span class="tag">Đã có phần giới thiệu</span>
         <h3>Khổng Tử</h3>
         <span class="han">論語</span>
         <p>Luận Ngữ. Nhân, lễ, chính danh, tu thân. Cũng là sợi dây nối với Thập Dực của Kinh Dịch.</p>
+        <a class="go" href="#khong-tu">Xem phần Khổng Tử →</a>
       </article>
       <article class="step later">
         <span class="tag">Sau này</span>
         <h3>Phật</h3>
         <span class="han">佛</span>
-        <p>Tôi chưa đọc nhiều về Thích Ca Mâu Ni, nên phần này sẽ chờ đến khi tôi đủ hiểu để viết.</p>
+        <p>Tôi chưa đọc nhiều về Thích Ca Mâu Ni, nên phần này mới ở mức sơ lược và sẽ viết lại khi tôi đủ hiểu.</p>
+        <a class="go" href="#phat">Xem phần Phật →</a>
       </article>
+    </div>
+  </div>
+</section>
+
+<!-- Lão Tử -->
+<section class="band paper" id="lao-tu">
+  <div class="wrap topic">
+    <div>
+      <p class="eyebrow">道德經 · Đạo Đức Kinh</p>
+      <h2 class="script">Lão Tử</h2>
+      <p class="lead">Một cuốn sách khoảng năm nghìn chữ, chia thành 81 chương ngắn, mà người đọc cả đời vẫn thấy còn chỗ chưa hiểu.</p>
+      <ul class="sq">
+        <li>Tương truyền tác giả là Lão Tử (còn gọi là Lão Đam), sống vào thời Xuân Thu. Về người và về thời điểm sách thành hình, giới nghiên cứu chưa thống nhất.</li>
+        <li>Sách chia hai phần. Thiên Đạo kinh (chương 1 đến 37) bàn về Đạo. Thiên Đức kinh (chương 38 đến 81) bàn về Đức, tức cách Đạo hiện ra trong đời sống.</li>
+        <li>Đạo là nguồn gốc không gọi tên được. Vô vi là không làm trái tự nhiên, không phải là không làm gì. Nhu nhược thắng cương cường: nước mềm mà xuyên được đá.</li>
+        <li>Lão Tử đề cao sự tĩnh, sự trống rỗng và biết đủ. Đó là điều đối trọng với lối sống luôn cố gắng và luôn muốn hơn.</li>
+        <li>Với Kinh Dịch, hai sách gặp nhau ở chỗ cùng nhìn đời như một dòng biến đổi, và cùng dạy mềm và cứng đi cùng nhau. Dịch nhấn mạnh thời, Lão Tử nhấn mạnh sự trở về.</li>
+      </ul>
+      <h3>Vài chương nên đọc trước</h3>
+      <dl class="chap">
+        <dt>Chương 1</dt><dd>Đạo mà nói ra được thì không phải là Đạo thường hằng. Chương mở đầu của cả sách.</dd>
+        <dt>Chương 8</dt><dd>Điều thiện cao nhất như nước: làm lợi cho muôn vật mà không tranh, ở chỗ người ta không thích.</dd>
+        <dt>Chương 11</dt><dd>Ba mươi nan hoa chung một moay-ơ, nhờ chỗ trống ở giữa mà bánh xe dùng được. Cái có đem lại lợi ích, cái không làm nên công dụng.</dd>
+        <dt>Chương 16</dt><dd>Đạt đến chỗ rỗng rang, giữ lấy sự tĩnh. Muôn vật sinh ra rồi trở về gốc.</dd>
+        <dt>Chương 40</dt><dd>Quay trở lại là sự chuyển động của Đạo, yếu đuối là chỗ dùng của Đạo.</dd>
+        <dt>Chương 64</dt><dd>Chuyến đi ngàn dặm bắt đầu từ dưới chân. Việc khó bắt đầu từ chỗ dễ.</dd>
+        <dt>Chương 76</dt><dd>Người sống thì mềm yếu, chết thì cứng đờ. Cứng mạnh là loại của sự chết, mềm yếu là loại của sự sống.</dd>
+      </dl>
+      <p class="small">Phần tóm ý trên là lời của tôi. Khi viết ghi chú, tôi sẽ nêu rõ đang đọc theo bản dịch nào.</p>
+    </div>
+    <div>
+      <blockquote class="quote" style="margin:0">
+        <p class="han">上善若水</p>
+        <p class="vi">Thượng thiện nhược thủy.</p>
+        <cite>Đạo Đức Kinh, chương 8</cite>
+      </blockquote>
+      <blockquote class="quote">
+        <p class="han">柔弱勝剛強</p>
+        <p class="vi">Nhu nhược thắng cương cường.</p>
+        <cite>Đạo Đức Kinh, chương 36</cite>
+      </blockquote>
+      <blockquote class="quote">
+        <p class="han">知足不辱</p>
+        <p class="vi">Tri túc bất nhục.</p>
+        <cite>Đạo Đức Kinh, chương 44</cite>
+      </blockquote>
+      <blockquote class="quote">
+        <p class="han">千里之行始於足下</p>
+        <p class="vi">Thiên lý chi hành, thủy ư túc hạ.</p>
+        <cite>Đạo Đức Kinh, chương 64</cite>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- Khổng Tử -->
+<section class="band slate" id="khong-tu">
+  <div class="wrap topic">
+    <div>
+      <p class="eyebrow">論語 · Luận Ngữ</p>
+      <h2 class="script">Khổng Tử</h2>
+      <p class="lead">Một người thầy cả đời dạy học, không viết sách. Lời của ông được học trò chép lại, thành Luận Ngữ.</p>
+      <ul class="sq">
+        <li>Khổng Tử (551 đến 479 trước Công nguyên) sinh ở nước Lỗ. Ông dạy học, đi các nước tìm người dùng đạo của mình, cuối đời trở về dạy học và chỉnh lý các sách cổ.</li>
+        <li>Luận Ngữ gồm 20 thiên, ghi lời Khổng Tử và đối đáp với học trò. Cùng với Đại Học, Trung Dung và Mạnh Tử, sách nằm trong Tứ Thư.</li>
+        <li>Nhân là gốc: yêu người, mà trước hết là biết đặt mình vào chỗ người khác. Lễ là hình thức để lòng nhân có chỗ nương. Chính danh là mỗi người ở đúng vị trí và làm đúng phận sự.</li>
+        <li>Người quân tử là người tu thân, giữ chữ tín, hòa với người mà không a dua. Đức hạnh đến từ học, và học là việc cả đời.</li>
+        <li>Trong Ngũ Kinh có Kinh Dịch. Theo truyền thống, Khổng Tử là người viết Thập Dực, và Luận Ngữ có một câu nói đến việc ông học Dịch vào tuổi năm mươi. Vì vậy Khổng Tử là sợi dây nối trang này từ Kinh Dịch sang Nho học.</li>
+      </ul>
+      <h3>Vài ý nên đọc trước</h3>
+      <dl class="chap">
+        <dt>Thiên 1</dt><dd>Học rồi thường xuyên ôn tập, chẳng phải là vui sao. Câu mở đầu của Luận Ngữ.</dd>
+        <dt>Thiên 2</dt><dd>Ôn cái cũ mà biết thêm cái mới thì có thể làm thầy người.</dd>
+        <dt>Thiên 7</dt><dd>Cho tôi thêm vài năm nữa, đến năm mươi tuổi học Dịch thì có thể không mắc lỗi lớn. Một số bản chép chữ này hơi khác nhau, nên các nhà chú giải có bàn.</dd>
+        <dt>Thiên 13</dt><dd>Quân tử hòa mà không đồng, tiểu nhân đồng mà không hòa.</dd>
+        <dt>Thiên 15</dt><dd>Điều mình không muốn thì đừng làm cho người khác.</dd>
+      </dl>
+      <p class="small">Phần tóm ý trên là lời của tôi, chưa phải bản dịch nào.</p>
+    </div>
+    <div>
+      <blockquote class="quote" style="margin:0">
+        <p class="han">學而時習之</p>
+        <p class="vi">Học nhi thời tập chi.</p>
+        <cite>Luận Ngữ, Học nhi</cite>
+      </blockquote>
+      <blockquote class="quote">
+        <p class="han">溫故而知新</p>
+        <p class="vi">Ôn cố nhi tri tân.</p>
+        <cite>Luận Ngữ, Vi chính</cite>
+      </blockquote>
+      <blockquote class="quote">
+        <p class="han">君子和而不同</p>
+        <p class="vi">Quân tử hòa nhi bất đồng.</p>
+        <cite>Luận Ngữ, Tử Lộ</cite>
+      </blockquote>
+      <blockquote class="quote">
+        <p class="han">己所不欲，勿施於人</p>
+        <p class="vi">Kỷ sở bất dục, vật thi ư nhân.</p>
+        <cite>Luận Ngữ, Vệ Linh Công</cite>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- Phật -->
+<section class="band mist" id="phat">
+  <div class="wrap topic">
+    <div>
+      <p class="eyebrow">佛 · Phật học</p>
+      <h2 class="script">Phật</h2>
+      <p class="lead">Phần này mới là bản đồ sơ lược. Tôi chưa đọc đủ để viết sâu, nên chỉ ghi những điều cơ bản nhất.</p>
+      <ul class="sq">
+        <li>Phật là cách gọi người đã giác ngộ. Người sáng lập Phật giáo là Thích Ca Mâu Ni (Siddhartha Gautama), sống ở miền Bắc Ấn Độ vào khoảng thế kỷ 6 đến 5 trước Công nguyên. Năm tháng chính xác còn được bàn luận.</li>
+        <li>Tứ Diệu Đế là bốn sự thật: có khổ, khổ có nguyên nhân, khổ có thể chấm dứt, và có con đường để chấm dứt khổ.</li>
+        <li>Con đường ấy là Bát Chánh Đạo: hiểu đúng, nghĩ đúng, nói đúng, làm đúng, sống đúng, tinh tấn đúng, nhớ đúng và định tâm đúng.</li>
+        <li>Ba dấu ấn của mọi sự là vô thường (mọi thứ đều đổi), khổ, và vô ngã (không có một cái ta cố định).</li>
+        <li>Trung đạo là con đường giữa, không rơi vào hưởng thụ quá mức, cũng không khổ hạnh quá mức.</li>
+      </ul>
+      <h3>Chỗ có thể đối chiếu với Dịch</h3>
+      <dl class="chap">
+        <dt>Biến đổi</dt><dd>Dịch nói mọi sự đều biến dịch. Phật học nói vô thường. Hai cách nói gần nhau, nhưng đi đến những kết luận khác nhau.</dd>
+        <dt>Chừng mực</dt><dd>Trung đạo của Phật học và ý "trung chính" trong Dịch đều dạy không nghiêng về cực đoan.</dd>
+      </dl>
+      <p class="small">Đây là chỗ tôi tạm đặt ra để đối chiếu. Khi đã đọc nhiều hơn, tôi sẽ viết lại cho đúng.</p>
+    </div>
+    <div>
+      <blockquote class="quote" style="margin:0">
+        <p class="han">諸行無常</p>
+        <p class="vi">Chư hành vô thường.</p>
+        <cite>Một trong ba dấu ấn của Phật pháp</cite>
+      </blockquote>
     </div>
   </div>
 </section>
@@ -327,25 +515,29 @@ nav.menu{min-width:0;flex:1;justify-content:flex-end}
         <h3>Kinh Dịch, Đạo của người quân tử</h3>
         <p class="w">Nguyễn Hiến Lê</p>
         <p>Đọc Dịch như một triết lý sống: vũ trụ quan, nhân sinh quan và cách xử thế.</p>
-        <p class="mine">Ghi chú của tôi: sẽ thêm.</p>
+        <p>Tác giả chú trọng phần triết lý của Dịch hơn phần bói toán, nên cuốn này dễ vào cho người mới.</p>
+        <p class="mine">Ghi chú của tôi: đang viết dần.</p>
       </article>
       <article class="book">
         <h3>Dịch Học Tinh Hoa, Chu Dịch Huyền Giải</h3>
         <p class="w">Nguyễn Duy Cần (Thu Giang)</p>
         <p>Giải thích âm dương, tứ tượng, Hà Đồ, Lạc Thư và đem Dịch ứng dụng vào việc nhìn xã hội.</p>
-        <p class="mine">Ghi chú của tôi: sẽ thêm.</p>
+        <p>Đọc để thấy Dịch là tư tưởng về biến đổi, không chỉ là một bộ sách xem quẻ.</p>
+        <p class="mine">Ghi chú của tôi: đang viết dần.</p>
       </article>
       <article class="book">
         <h3>Kinh Dịch</h3>
         <p class="w">Ngô Tất Tố</p>
         <p>Bản dịch kèm chú giải theo truyền thống Trình Di và Chu Hy, đọc từng quẻ, từng hào.</p>
-        <p class="mine">Ghi chú của tôi: sẽ thêm.</p>
+        <p>Nên đọc chậm từng quẻ và đối chiếu với các bản khác.</p>
+        <p class="mine">Ghi chú của tôi: đang viết dần.</p>
       </article>
       <article class="book">
         <h3>Chu Dịch</h3>
         <p class="w">Phan Bội Châu</p>
         <p>Bản diễn giải của một nhà Nho lớn, viết bằng quốc ngữ cho người Việt.</p>
-        <p class="mine">Ghi chú của tôi: sẽ thêm.</p>
+        <p>Tác giả viết trong những năm sống ở Huế, nên bản này mang giọng của một nhà Nho yêu nước.</p>
+        <p class="mine">Ghi chú của tôi: đang viết dần.</p>
       </article>
     </div>
   </div>
@@ -404,6 +596,7 @@ nav.menu{min-width:0;flex:1;justify-content:flex-end}
         <dt>Sáu hào</dt><dd id="dLines"></dd>
       </dl>
       <div class="meaning" id="dMean"></div>
+      <div class="more" id="dMore"></div>
       <p class="note">Ghi chú của tôi về quẻ này: chưa viết.</p>
     </div>
     <div class="foot">
@@ -494,6 +687,74 @@ var H=[
 [64,'Vị Tế','未濟',2,5,'Chưa xong. Kết thúc cũng là khởi đầu mới, cẩn thận ở bước cuối.']
 ];
 
+/* Phần mở rộng cho từng quẻ, cùng thứ tự với H: [ý nghĩa, bài học] */
+var HD=[
+['Sáu hào đều dương, tượng trưng cho trời và sức sáng tạo không ngừng. Sáu hào đi từ rồng còn ẩn dưới vực, rồng hiện ngoài đồng, rồng bay trên trời, đến rồng bay quá cao. Mỗi giai đoạn có cách hành xử riêng.','Tự cường mà biết lúc nên ẩn, lúc nên hiện, và đừng để sức mạnh thành kiêu.'],
+['Sáu hào đều âm, tượng trưng cho đất: chứa đựng, nuôi dưỡng, thuận theo. Khôn không đối nghịch với Càn mà đi theo Càn, hoàn thành việc Càn khởi xướng.','Nhu thuận không phải yếu đuối. Sức bền của sự mềm mại và lòng bao dung rất lớn.'],
+['Mây và sấm gặp nhau mà mưa chưa rơi. Mọi việc lúc mới bắt đầu đều rối ren, như mầm cây đang đội đất nhú lên.','Đừng vội hành động một mình. Kiên trì, giữ đường chính và nhờ người giúp sức.'],
+['Dưới núi có dòng suối còn nhỏ, như đứa trẻ mới biết. Quẻ nói về việc học: người học phải thành tâm đến hỏi, thầy không đi tìm học trò.','Hỏi bằng lòng thành thì mới học được. Hỏi đi hỏi lại một cách nhờn thì thầy không đáp.'],
+['Mây đã kéo lên trời mà mưa chưa xuống. Gặp lúc chưa tới thời, người có thực lực vẫn phải biết chờ, ăn uống vui vẻ để giữ sức.','Chờ đợi không phải là bỏ cuộc. Đó là lúc tích sức và giữ lòng tin cho đến khi đúng thời.'],
+['Trời đi lên, nước chảy xuống, hai bên đi ngược chiều nên sinh tranh chấp. Trong lòng có điều hiểm mà bề ngoài cứng rắn.','Có lý cũng nên dừng đúng lúc. Theo kiện đến cùng thì cuối cùng thường chịu thiệt.'],
+['Nước chứa trong lòng đất, như quân lính ẩn trong dân. Quẻ nói về việc điều khiển một đám đông, cần chính nghĩa, kỷ luật, và người cầm đầu vững vàng (một hào dương ở giữa quẻ).','Người lãnh đạo giỏi là người được tin phục, giữ kỷ luật mà không bạo ngược.'],
+['Nước ở trên mặt đất thấm sát vào đất, tượng của sự gần gũi. Cả quẻ chỉ có một hào dương ở ngôi cao, các hào âm đều hướng về.','Chọn người để gần gũi bằng lòng thành, và tự mình cũng là người đáng cho người khác tin.'],
+['Gió bay trên trời, mây dày mà chưa mưa. Một hào âm ở ngôi tứ nhẹ nhàng giữ lại năm hào dương: sức tích tụ còn nhỏ.','Chưa đủ sức làm việc lớn thì làm cho tốt việc nhỏ và vun đắp văn đức.'],
+['Đi sau đuôi cọp mà cọp không cắn. Đó là hình ảnh người yếu đi cạnh người mạnh, bước đi cẩn trọng và đúng lễ.','Biết vị trí của mình, giữ lễ và thận trọng thì vượt qua được chỗ nguy hiểm.'],
+['Khôn ở trên, Càn ở dưới: khí của trời đi lên, khí của đất đi xuống, hai khí gặp nhau nên muôn vật thông thuận. Bên trong mạnh, bên ngoài mềm; quân tử đang lớn, tiểu nhân đang lui.','Lúc thịnh nên nhớ rằng thời nào cũng có lúc đổi. Giữ lòng chính để cái tốt được lâu dài.'],
+['Ngược với Thái: trời ở trên, đất ở dưới, hai khí tách nhau nên trên dưới không thông. Người xấu lấn át, người tốt khó thi thố.','Gặp thời bế tắc thì giữ đức, sống giản dị, đừng tranh đua. Bĩ đến cực thì sẽ qua.'],
+['Lửa bốc lên theo trời. Người ta cùng nhau hòa hợp ngoài đồng rộng, nghĩa là công tâm, không bè phái. Sự hòa dựa trên chí hướng chung.','Hòa với người bằng lẽ công và đừng khép mình trong một nhóm nhỏ.'],
+['Mặt trời trên bầu trời soi khắp. Một hào âm ở ngôi vua được cả năm hào dương theo về: có nhiều của, nhiều thế lực.','Giàu có thì càng cần khiêm tốn, giúp điều thiện, dẹp điều ác. Đừng để đầy mà tràn.'],
+['Núi cao nằm dưới đất thấp: người có tài đức mà tự hạ mình. Quẻ này thường được nói là quẻ mà cả sáu hào đều không có lời xấu.','Khiêm không phải là hèn. Bớt chỗ đầy bù chỗ vơi là lẽ của trời đất và lòng người.'],
+['Sấm nổi lên từ lòng đất, muôn vật hoan hỉ như mùa xuân về. Quẻ nói về niềm vui và sự chuẩn bị. Vua xưa làm nhạc, tế lễ để cảm hóa lòng người.','Vui đúng lúc nhờ có chuẩn bị. Đừng mê vui mà quên cảnh giác.'],
+['Sấm ẩn trong đầm lúc chiều tối, vật nghỉ theo thời. Người trên hạ mình theo người dưới, theo nhau nhưng phải theo điều chính đáng.','Biết theo thời, theo điều phải, và chỉ theo người đáng theo.'],
+['Gió bị núi chắn, vật ứ đọng thì sinh sâu mọt. Chữ Cổ nghĩa là việc hư hỏng vì để lâu không chăm. Cần dọn dẹp, sửa chữa, xem lại việc người đi trước để lại.','Nhìn thẳng vào nguyên nhân gốc của cái hỏng. Phải xét kỹ trước khi sửa và dặn dò kỹ sau khi sửa.'],
+['Đầm nước có bờ đất bao phủ: người trên đến gần, quan tâm và dạy dỗ người dưới. Hai hào dương đang lớn lên từ dưới.','Thời đang lên thì làm cho tốt, nhưng đừng chủ quan vì cũng sẽ có lúc suy.'],
+['Gió thổi qua mặt đất, nhìn xét khắp nơi. Hai hào dương ở trên làm gương cho các hào âm ở dưới. Quan có hai nghĩa: xem xét, và làm cho người khác trông vào.','Quan sát kỹ, soi lại mình, và sống sao cho đáng làm gương.'],
+['Sấm và chớp cùng đến, uy và sáng kết hợp. Trong miệng có vật chắn, phải cắn đứt thì mới khép lại. Quẻ nói về việc dùng kỷ cương để trừ chướng ngại.','Gặp trở ngại thì giải quyết dứt khoát, nhưng công bằng và vừa mức.'],
+['Ánh lửa chiếu sáng chân núi, tô điểm cho cảnh vật. Văn vẻ bên ngoài làm đẹp thêm nhưng chỉ giúp được việc nhỏ.','Hình thức có ích nhưng không thay được nội dung. Giữ phần chất làm gốc.'],
+['Năm hào âm đẩy một hào dương ở trên cùng, như núi bị mưa gió bào mòn hay ngôi nhà bị mối mọt. Tiểu nhân thắng thế.','Thời suy thì đừng hành động mạnh. Giữ yên lặng, bảo toàn gốc rễ, như nhà cần giữ lấy nền.'],
+['Một hào dương sinh ra ở dưới sau cả năm hào âm, như tiết đông chí khi dương khí trở lại. Quẻ nói về sự quay về và khởi đầu mới.','Biết sai thì quay lại sớm, đừng đi quá xa. Khởi đầu mới luôn còn đó.'],
+['Sấm động dưới trời, vạn vật theo đúng bản tính tự nhiên. Vô vọng là không làm càn, không có toan tính trái đạo, sống chân thật.','Làm điều đúng mà không mong cầu ngoài lẽ. Ngay thẳng thì tai họa bất ngờ cũng ít.'],
+['Trời nằm trong núi: tích chứa lớn về đức và học vấn. Hai hào dương ở trên giữ lại ba hào dương ở dưới để nuôi dưỡng.','Học rộng, nhớ lời xưa việc cũ để nuôi đức. Tích đủ thì làm được việc lớn.'],
+['Hình quẻ như cái miệng: trên dưới là hai hào dương, giữa là bốn hào âm. Quẻ nói về nuôi thân (ăn uống) và nuôi đức (lời nói).','Cẩn thận lời nói, tiết chế ăn uống. Xem mình nuôi cái gì thì sẽ thành cái đó.'],
+['Nước dâng ngập cây. Bốn hào dương ở giữa nặng, hai hào âm hai đầu yếu, như cột nhà oằn xuống vì gánh quá sức. Đây là thời của việc phi thường.','Khi gánh vượt sức, cần quyết đoán, dám đứng một mình mà không sợ, nhưng cũng đừng làm ẩu.'],
+['Hai quẻ Khảm chồng nhau, hiểm trùng điệp như nước chảy xuống chỗ trũng. Nước vẫn chảy không ngừng và không cạn. Giữ lòng tin thành thì vượt qua được.','Khi gặp hiểm, giữ lòng thành và đức bền, đừng chờ hết khó mới làm.'],
+['Hai quẻ Ly chồng nhau, lửa nối lửa, sáng nối sáng. Ly là bám vào: lửa bám vào củi, mặt trời bám vào trời. Cho nên phải chọn chỗ bám cho chính đáng, và nuôi tính nhu thuận.','Sáng suốt mà mềm mỏng. Chọn nơi nương tựa chính đáng.'],
+['Đầm ở trên núi, thiếu nữ ở trên thiếu nam: tượng của cảm ứng, nhất là tình yêu và hôn nhân. Cảm nhau bằng tấm lòng trống rỗng, không toan tính.','Chân thành và hạ mình thì cảm động được lòng người.'],
+['Sấm và gió luôn đi cùng nhau, như đạo vợ chồng lâu dài. Bền không phải đứng yên, mà là đi theo cùng một đạo và vận hành không dứt.','Kiên trì với chính đạo, nhưng linh hoạt trong cách làm.'],
+['Hai hào âm lớn lên từ dưới, bốn hào dương rút lui. Dưới trời còn có núi chặn lại. Người quân tử lui khỏi tiểu nhân mà không hằn học.','Lui đúng lúc là khôn ngoan. Giữ khoảng cách, không ghét bỏ nhưng nghiêm.'],
+['Bốn hào dương đẩy lên, sấm nổ trên trời: thế mạnh lớn. Nhưng sức mạnh chỉ tốt khi đi cùng chính nghĩa, như con dê đực húc vào hàng rào mà mắc sừng.','Có sức mạnh thì giữ lễ, không làm điều trái lễ. Mạnh không có nghĩa là liều.'],
+['Mặt trời lên khỏi mặt đất, sáng dần: được tin dùng, thăng tiến. Quẻ nói về cách tiến lên trong ánh sáng và sự thuận hòa.','Tự làm sáng đức mình. Tiến lên thuận lẽ thì được nâng đỡ.'],
+['Mặt trời chìm xuống lòng đất, thời đen tối do bề trên bất minh. Bên trong sáng mà bên ngoài nhu thuận, như người xưa giả điên để giữ chí.','Lúc tối thì giấu sáng trong lòng, giữ chí, sống qua thời mà không đánh mất mình.'],
+['Lửa sinh ra gió, từ trong nhà lan ra ngoài. Người nữ đứng đúng ngôi nữ, người nam đứng đúng ngôi nam, mỗi người ở đúng vị trí thì nhà yên.','Lời nói có thực, việc làm có chừng. Sửa mình trước thì nhà mới yên.'],
+['Lửa bốc lên, nước chảy xuống, hai bên đi xa nhau. Đây là thời bất đồng, chia lìa. Tuy vậy việc nhỏ vẫn có thể thành.','Tìm chỗ giống nhau trong cái khác. Khác mà không ghét bỏ nhau.'],
+['Phía trước có nước hiểm, phía sau có núi chặn, đi không được. Tiến lui đều khó.','Gặp gian nan thì quay về sửa đức, tìm người giỏi giúp, đừng cố tiến.'],
+['Sấm động, mưa rơi, mọi thứ cởi mở sau mùa khó. Nút thắt được tháo ra.','Khó khăn qua rồi thì tha thứ lỗi nhỏ, làm việc nhanh gọn, đừng kéo dài.'],
+['Núi ở trên, đầm ở dưới. Bớt phần dưới để thêm phần trên, bớt cái thừa để giữ cái thật. Bớt mà thành tâm thì vẫn tốt.','Biết bớt giận, bớt dục. Hy sinh có chừng mực mà thật lòng thì vẫn được tốt.'],
+['Gió và sấm tăng thêm sức cho nhau. Bớt của người trên mà giúp người dưới: người trên làm lợi cho dân.','Thấy điều thiện thì theo, có lỗi thì sửa. Làm lợi cho người thì mình cũng lớn thêm.'],
+['Năm hào dương đẩy một hào âm ở trên cùng: dứt bỏ. Quyết định cương quyết nhưng phải nói rõ, làm công khai, không dùng bạo lực.','Dứt điều xấu một cách đường hoàng, không để lòng giận dẫn dắt.'],
+['Một hào âm bất ngờ xuất hiện ở dưới cả năm hào dương: gặp gỡ ngẫu nhiên. Thế lực nhỏ mới bắt đầu, khó lường, có thể lớn dần.','Đừng coi thường điều nhỏ đang lớn dần. Gặp gỡ nào cũng cần cẩn thận.'],
+['Nước tụ trên đất, người tụ họp lại. Nhờ lòng thành và người đứng đầu chính trực, nhưng cũng phải đề phòng bất ngờ.','Tụ họp phải có người dẫn dắt ngay thẳng và có chuẩn bị đề phòng.'],
+['Cây mọc lên từ đất, lớn dần từng chút. Tiến lên có kế hoạch và có người trợ giúp.','Tích nhỏ thành lớn. Thăng tiến từ từ nhưng bền.'],
+['Nước đã chảy xuống dưới đầm khiến đầm cạn: bị bao vây, thiếu thốn. Nói ra khó ai tin.','Lúc khốn thì giữ chí, ít nói, tin vào đạo và biết vui trong cảnh khó.'],
+['Cái giếng được dùng mãi mà nguồn không cạn. Nhưng phải bồi lấp, sửa dây gầu, nếu không thì giếng hỏng.','Nguồn của mình cần được nuôi giữ thường xuyên. Làm lợi cho người mà không đòi hỏi.'],
+['Nước và lửa chống nhau, thay da đổi lông: thời của cải cách. Lòng tin của người dân là điều kiện quan trọng.','Muốn đổi thì chờ đúng thời, có lòng tin và đổi cho hợp lẽ.'],
+['Cái vạc nấu ăn: lấy lửa nấu chín thức ăn, dùng để tế lễ và nuôi người hiền. Sau khi đổi cũ thì dựng cái mới.','Sau khi thay đổi thì xây dựng. Chọn đúng người và giữ vị trí cho vững.'],
+['Hai tiếng sấm nối nhau, kinh động trăm dặm nhưng người quân tử vẫn không làm rơi chén rượu. Sợ hãi giúp con người tự xét lại mình.','Gặp biến động thì giữ bình tĩnh, nhân đó sửa mình.'],
+['Hai quẻ núi chồng nhau: dừng. Dừng khi đáng dừng, đi khi đáng đi. Quân tử suy nghĩ không vượt ra ngoài vị trí của mình.','Biết dừng đúng lúc, giữ tĩnh trong lòng để thấy rõ.'],
+['Cây mọc trên núi, lớn dần từng chút. Chim hồng tiến từng bước, từ bờ nước lên đá, lên núi. Việc hôn nhân cũng phải theo trình tự.','Tiến tuần tự và giữ đức tốt thì cũng đổi được phong tục.'],
+['Cô gái nhỏ về nhà chồng, làm theo cảm xúc mà chưa đúng lễ nên có chỗ chưa ổn. Nói rộng ra, đó là kết cục của những quan hệ nôn nóng.','Làm việc có đầu có cuối. Nhìn trước kết quả, đừng để cảm xúc nhất thời dẫn dắt.'],
+['Sáng và động cùng nhau, thịnh lớn như mặt trời giữa trưa. Đã giữa trưa thì sắp xế.','Lúc thịnh nên nhớ thịnh rồi sẽ suy. Xét việc công bằng, đừng kiêu.'],
+['Lửa cháy trên núi rồi lan đi, không ở yên một chỗ: người đi xa, ở nhờ nơi đất khách.','Làm khách thì khiêm tốn, giữ chính, kín đáo, không gây sự.'],
+['Hai quẻ gió nối nhau, thấm vào mọi chỗ. Dịu dàng, không ép, nhún nhường mà kiên trì nên thấm sâu.','Mệnh lệnh nhẹ nhàng mà lặp lại thì thấm. Khiêm tốn nhưng vẫn có chủ kiến.'],
+['Hai đầm nối nhau, niềm vui của bạn bè cùng học hỏi. Vui bằng lời chân thật, không nịnh.','Niềm vui thật đến từ sự chân thành. Cẩn thận với lời ngọt.'],
+['Gió thổi trên nước, làm tan băng, tan tụ. Giải tỏa sự ngăn cách và thu lòng người lại bằng sự thành kính.','Tan cái cũ để tụ cái mới. Mở lòng thì ngăn cách tự tan.'],
+['Đầm có bờ thì chứa được nước, có chừng mực thì lâu bền. Nhưng tiết chế quá khổ thì cũng không giữ được lâu.','Chừng mực vừa đủ: không buông thả, cũng không quá hà khắc.'],
+['Giữa quẻ có hai hào âm như lòng người trống rỗng, chứa được chân thành; bên ngoài là các hào dương vững chắc. Gió thổi trên mặt đầm, thấm đến tận đáy.','Thành tín là gốc của mọi quan hệ. Xét việc hình ngục cũng cần lòng khoan.'],
+['Hai hào dương ở giữa, bốn hào âm bao quanh, như con chim bay với hai cánh. Việc nhỏ làm hơi quá thì được, việc lớn thì không.','Ở việc nhỏ có thể cung kính hơn, tiết kiệm hơn bình thường. Việc lớn thì phải đúng mức.'],
+['Nước ở trên, lửa ở dưới, đun sôi thành công. Cả sáu hào đều đúng ngôi. Việc đã xong, trật tự đã định, nhưng thịnh đến cực thì dễ loạn.','Lúc xong việc cũng là lúc phải lo giữ gìn. Nghĩ đến hoạn nạn để phòng trước.'],
+['Lửa ở trên, nước ở dưới, không giao nhau nên chưa thành. Sáu hào đều chưa đúng ngôi nhưng đều ứng nhau, nên vẫn có hy vọng. Cuối quẻ mở ra một vòng mới.','Việc chưa xong thì thận trọng đến phút cuối. Kết thúc cũng là khởi đầu của vòng mới.']
+];
+
 var POS=['Sơ','Nhị','Tam','Tứ','Ngũ','Thượng'];
 function lines(h){return TRI[h[4]].l.concat(TRI[h[3]].l);}  /* dưới lên: hạ quái rồi thượng quái */
 function fullName(h){
@@ -576,6 +837,8 @@ function openQ(n){
     return (i===0||i===5)?POS[i]+' '+t:t+' '+POS[i];
   }).join(', ')+' (từ dưới lên)';
   document.getElementById('dMean').textContent=h[5];
+  var hd=HD[n-1];
+  document.getElementById('dMore').innerHTML='<p>'+hd[0]+'</p><p><b>Bài học:</b> '+hd[1]+'</p>';
   document.getElementById('dPrev').disabled=n===1;
   document.getElementById('dNext').disabled=n===64;
   if(dlg.hidden){lastFocus=document.activeElement;dlg.hidden=false;document.body.style.overflow='hidden';}
